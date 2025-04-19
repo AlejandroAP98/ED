@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+  font-weight: 300;
+  color-scheme: light dark; 
+  color: #E7ECEF;
+  background-size: auto;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.75)), url('./assets/wallpaper.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+strong {
+  font-weight: 600;
+  color: #FEA82F;
+}
+
+select {
+  outline: none;
+  border: none;
+}
