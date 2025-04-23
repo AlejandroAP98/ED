@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import WeaponComparator from "./WeaponComparator";
 import BossesInfo from "./BossesInfo";
+import TalismanInfo from "./TalismanInfo";
+import SpiritsInfo from "./SpiritsInfo";
 
 export default function App() {
   const [view, setView] = useState("home");
@@ -8,6 +10,8 @@ export default function App() {
   const goToHome = () => setView("home");
   const goToComparator = () => setView("comparator");
   const goToBosses = () => setView("bosses");
+  const goToTalismans = () => setView("talismans");
+  const goToSpirits = () => setView("spirits");
 
   return (
     <div className="min-h-screen flex flex-col items-center p-4">
@@ -17,15 +21,27 @@ export default function App() {
           <div className="flex flex-col gap-4">
             <button
               onClick={goToComparator}
-              className="px-6 py-2 bg-[#FEA82F]/85 text-white rounded hover:bg-amber-400/50 cursor-pointer"
+              className="px-6 py-2 bg-[#FEA82F] text-white rounded hover:bg-amber-400/50 cursor-pointer"
             >
-              Ir al Comparador de Armas
+              Comparador de Armas
             </button>
             <button
               onClick={goToBosses}
               className="px-6 py-2 bg-[#FEA82F] text-white rounded hover:bg-amber-400/50 cursor-pointer"
             >
-              Ver Jefes del Juego
+             Jefes del Juego
+            </button>
+            <button
+              onClick={goToTalismans}
+              className="px-6 py-2 bg-[#FEA82F] text-white rounded hover:bg-amber-400/50 cursor-pointer"
+            >
+              Talismanes del juego
+            </button>
+            <button
+              onClick={goToSpirits}
+              className="px-6 py-2 bg-[#FEA82F] text-white rounded hover:bg-amber-400/50 cursor-pointer"
+            >
+             Espíritus del juego
             </button>
           </div>
         </>
@@ -52,6 +68,29 @@ export default function App() {
             ← Volver al Inicio
           </button>
           <BossesInfo />
+        </>
+      )}
+
+      {view === "talismans" && (
+        <>
+          <button
+            onClick={goToHome}
+            className="self-start mb-4 px-4 py-2 bg-gray-600 rounded hover:bg-gray-400 fixed top-2 left-4 hover:cursor-pointer"
+          >
+            ← Volver al Inicio
+          </button>
+          <TalismanInfo />
+        </>
+      )}
+      {view === "spirits" && (
+        <>
+          <button
+            onClick={goToHome}
+            className="self-start mb-4 px-4 py-2 bg-gray-600 rounded hover:bg-gray-400 fixed top-2 left-4 hover:cursor-pointer"
+          >
+            ← Volver al Inicio
+          </button>
+          <SpiritsInfo />
         </>
       )}
     </div>
